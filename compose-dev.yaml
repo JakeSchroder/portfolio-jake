@@ -1,0 +1,16 @@
+version: "3"
+services:
+  nginx-react:
+    container_name: nginx-react-app
+    build:
+      context: .
+      dockerfile: dockerfile.dev
+    ports:
+      - 3000:3000
+    volumes:
+      -  ./src:/usr/app/src
+      -  ./public:/usr/app/public
+    stdin_open: true
+    tty: true
+    environment:
+      NODE_ENV: development

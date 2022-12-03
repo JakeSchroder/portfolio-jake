@@ -1,0 +1,11 @@
+version: "3"
+services:
+  nginx-react:
+    container_name: nginx-react-app
+    build:
+      context: .
+      dockerfile: dockerfile.prod
+    ports:
+      - 80:80
+    environment:
+      NODE_ENV: production
