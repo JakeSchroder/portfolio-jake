@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
-import PageHeaderContainer from "../containers/PageHeader";
-import PageFooterContainer from '../containers/PageFooter';
-import ProjectPageBodyContainer from '../containers/ProjectPageBody';
-import AboutPageBodyContainer from '../containers/AboutPageBody';
+import HeaderContainer from "../containers/Header";
+import FooterContainer from '../containers/Footer';
+import ProjectBodyContainer from '../containers/ProjectBody';
+import AboutBodyContainer from '../containers/AboutBody';
 import { Box, Grid, AppBar} from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -21,10 +21,11 @@ const HomePage = () => {
       <ThemeProvider theme={darkTheme}>
         <CssBaseline/>
         <AppBar className='HomePage-header' color="transparent" elevation={0} position='absolute'>
-            <PageHeaderContainer mode={mode} setMode={setMode}/>
+            <HeaderContainer mode={mode} setMode={setMode}/>
         </AppBar>
-        <AboutPageBodyContainer/>
-        <PageFooterContainer/>
+        <AboutBodyContainer/>
+        <ProjectBodyContainer/>
+        <FooterContainer/>
       </ThemeProvider>  
     </div>
   );
