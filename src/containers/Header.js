@@ -12,7 +12,7 @@ import { positions } from '@mui/system';
 import MessageFormComponent from '../components/MessageForm';
 import NightsStayIcon from '@mui/icons-material/NightsStay';
 
-export default function PageHeader({mode, setMode}) {
+export default function Header({mode, setMode}) {
     const handleClick = () =>{
         setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
     }
