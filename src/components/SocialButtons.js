@@ -1,11 +1,9 @@
-import * as React from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { Grid, IconButton, Paper, Typography} from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
-export default function Footer() {
+import { Grid, IconButton} from '@mui/material';
+export default function SocialButtons(){
     return (
-        <Grid container justifyContent='center' sx={{backgroundColor:'#8E24AA', height:'200px'}}>
+        <Grid container>
             <IconButton size='large' target='_blank' href='https://github.com/JakeSchroder'>
                 <GitHubIcon fontSize='inherit'/>
             </IconButton>
@@ -14,4 +12,4 @@ export default function Footer() {
             </IconButton>
         </Grid>
     );
-  }
+}

@@ -18,13 +18,9 @@ export default function ProjectCard({
     <Grid key={index} paddingBottom={5}>
        <Card sx={{ maxWidth: 400 }} elevation={2} >
         <CardActionArea target='_blank' href={gitPage}>
-          <Box position='absolute' width={400} height={280} sx={{opacity: 0, '&:hover': {
-                                                                                    backgroundColor: 'black',
-                                                                                    opacity: [0.9, 0.8, 0.7],
-                                                                                  }}}
-          >
+          <Box position='absolute' width={400} height={280} sx={{opacity: 0, '&:hover': {backgroundColor: 'black', opacity: [0.9, 0.8, 0.7]}}}>
             <Typography gutterBottom color='white' variant="h5" component="div" bottom='15%' left='5%' position='absolute'>
-              {name}
+              <b>{name}</b>
             </Typography>
             <Typography variant="body2" color="white" bottom='10%' left='5%' position='absolute'>
               {text}

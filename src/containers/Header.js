@@ -1,14 +1,9 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import { Grid } from '@mui/material';
-import { positions } from '@mui/system';
+import { Grid, Toolbar, Button} from '@mui/material';
 import MessageFormComponent from '../components/MessageForm';
 import NightsStayIcon from '@mui/icons-material/NightsStay';
 
@@ -17,17 +12,16 @@ export default function Header({mode, setMode}) {
         setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
     }
     return (
+        <Grid container justifyContent='center' rowGap={0}>
             <Toolbar>
-                <Box display='flex' flexGrow={1}>
-                    <IconButton
-                    size="large"
-                    edge="start"
-                    color="inherit"
-                    aria-label="menu"
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                </Box>
+                <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                >
+                    <MenuIcon />
+                </IconButton>
 
                 <Button color="inherit">About</Button>
                 <Button color="inherit">Projects</Button>
@@ -37,5 +31,6 @@ export default function Header({mode, setMode}) {
                     {mode === 'dark' ? <LightModeIcon fontSize='inherit'/> : <NightsStayIcon fontSize='inherit'/>}
                 </IconButton>
             </Toolbar>
+        </Grid>
     );
 }
