@@ -19,7 +19,7 @@ const HomePage = () => {
     <div className="HomePage">
       <ThemeProvider theme={darkTheme}>
         <CssBaseline/>
-        <AppBar className='HomePage-header' color='default' elevation={0} position='sticky'>
+        <AppBar className='HomePage-header' color='inherit' elevation={0} position='sticky'>
           <HeaderContainer mode={mode} setMode={setMode}/>
         </AppBar>
         <AboutBodyContainer/>
