@@ -9,7 +9,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import SocialButtons from "../components/SocialButtons";
 
 const HomePage = () => {
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState('dark');
   const darkTheme = createTheme({
     palette: {
       mode: mode,
@@ -19,7 +19,7 @@ const HomePage = () => {
     <div className="HomePage">
       <ThemeProvider theme={darkTheme}>
         <CssBaseline/>
-        <AppBar className='HomePage-header' color='inherit' elevation={0} position='sticky'>
+        <AppBar className='HomePage-header' color='inherit' elevation={0} position='sticky' sx={{paddingTop:'1%'}}>
           <HeaderContainer mode={mode} setMode={setMode}/>
         </AppBar>
         <AboutBodyContainer/>

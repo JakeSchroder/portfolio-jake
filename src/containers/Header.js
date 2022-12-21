@@ -7,6 +7,7 @@ import { Grid, Toolbar, Button} from '@mui/material';
 import MessageFormComponent from '../components/MessageForm';
 import NightsStayIcon from '@mui/icons-material/NightsStay';
 import { ReactComponent as Logo } from "../logo.svg";
+import { useRef } from 'react';
 
 export default function Header({mode, setMode}) {
     const handleClick = () =>{
@@ -19,7 +20,9 @@ export default function Header({mode, setMode}) {
                 <Button color="inherit" >About</Button>
                 <Button color="inherit">Projects</Button>
                 <MessageFormComponent/>
-                <Button variant="contained" color="secondary" sx={{borderRadius: 28}} endIcon={<CallMadeIcon/>}>Resume</Button>
+                <Button variant="contained" color="secondary" href='/Resume-FullStack.pdf' target="_blank" sx={{borderRadius: 28}} endIcon={<CallMadeIcon/>}>
+                    Resume
+                </Button>
                 <IconButton size="large" onClick={handleClick} >
                     {mode === 'dark' ? <LightModeIcon fontSize='inherit'/> : <NightsStayIcon fontSize='inherit'/>}
                 </IconButton>
