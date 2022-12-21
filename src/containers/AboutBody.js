@@ -18,7 +18,7 @@ export default function AboutBody() {
                     <Typography variant='h6' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal'}}>A Frontend Developer and Visual Designer with experience in web design, brand identity and product design.</Typography>
                 </Grid>
                 <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
-                    <Button variant="contained" color="secondary" sx={{borderRadius: 28}} endIcon={<CallMadeIcon/>}>Resume</Button>
+                    <Button variant="contained" color="secondary" href='/Resume-FullStack.pdf' target="_blank" sx={{borderRadius: 28}} endIcon={<CallMadeIcon/>}>Resume</Button>
                 </Grid>
             </Grid>
     );
