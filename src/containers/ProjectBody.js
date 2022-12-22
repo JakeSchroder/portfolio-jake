@@ -7,16 +7,16 @@ export default function ProjectBody() {
         {
             'name': 'Packrat',
             'gitPage': 'https://github.com/JakeSchroder/EverythingEverywhere',
-            'link': 'www.packrat.shop',
+            'link': 'http://www.packrat.shop',
             'text': 'ReactJS, NodeJS, ExpressJS, MongoDB, Python',
-            'img': 'https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12153852/American-Eskimo-Dog-standing-in-the-grass-in-bright-sunlight-400x267.jpg'
+            'img': '/packrat-card.png'
         },
         {
             'name': 'Portfolio Site',
             'gitPage': 'https://github.com/JakeSchroder/portfolio-jake',
-            'link': 'N/A',
+            'link': 'https://github.com/JakeSchroder/portfolio-jake',
             'text': 'ReactJS, NGINX',
-            'img': 'https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12153852/American-Eskimo-Dog-standing-in-the-grass-in-bright-sunlight-400x267.jpg'
+            'img': '/portfolio-card.png'
         }
     ]
       
