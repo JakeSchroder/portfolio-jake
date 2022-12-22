@@ -4,12 +4,16 @@ import { Grid, IconButton} from '@mui/material';
 export default function SocialButtons(){
     return (
         <Grid container>
-            <IconButton size='large' target='_blank' href='https://github.com/JakeSchroder'>
-                <GitHubIcon fontSize='inherit'/>
-            </IconButton>
-            <IconButton size='large' target='_blank' href='https://www.linkedin.com/in/jakeschroder/'>
-                <LinkedInIcon fontSize='inherit'/>
-            </IconButton>
+            <Grid item xs={12} display="flex">
+                <IconButton size='large' target='_blank' href='https://github.com/JakeSchroder'>
+                    <GitHubIcon fontSize='inherit'/>
+                </IconButton>
+            </Grid>
+            <Grid item xs={12} display="flex">
+                <IconButton size='large' target='_blank' href='https://www.linkedin.com/in/jakeschroder/'>
+                    <LinkedInIcon fontSize='inherit'/>
+                </IconButton>
+            </Grid>
         </Grid>
     );
 }
