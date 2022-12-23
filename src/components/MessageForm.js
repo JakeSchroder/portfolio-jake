@@ -1,14 +1,8 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import { useState} from 'react';
+import {Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from '@mui/material';
 
 export default function MessageForm() {
-  const [open, setOpen] = React.useState(false);//Pass down this variable from the home page
+  const [open, setOpen] = useState(false);//Pass down this variable from the home page
 
   const handleClickOpen = () => {
     setOpen(true);

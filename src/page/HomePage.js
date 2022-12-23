@@ -3,10 +3,9 @@ import HeaderContainer from "../containers/Header";
 import FooterContainer from '../containers/Footer';
 import ProjectBodyContainer from '../containers/ProjectBody';
 import AboutBodyContainer from '../containers/AboutBody';
-import { Box, Grid, AppBar, IconButton} from '@mui/material';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
 import SocialButtons from "../components/SocialButtons";
+import {AppBar, CssBaseline} from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const HomePage = () => {
   const [mode, setMode] = useState('dark');

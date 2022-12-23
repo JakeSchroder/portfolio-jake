@@ -1,6 +1,6 @@
 import * as React from 'react';
+import { Grid, IconButton, Typography} from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { Grid, IconButton, Paper, Typography} from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function Footer() {
@@ -18,7 +18,7 @@ export default function Footer() {
                 </IconButton>
             </Grid>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" height={20}>
-                <Typography sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal'}}>Jake Schroder 2022. All Rights Reserved</Typography>
+                <Typography sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal'}}>Jake Schroder, 2022. All Rights Reserved</Typography>
             </Grid>
 
         </Grid>
