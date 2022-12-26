@@ -4,7 +4,7 @@ import FooterContainer from '../containers/Footer';
 import ProjectBodyContainer from '../containers/ProjectBody';
 import AboutBodyContainer from '../containers/AboutBody';
 import SocialButtons from "../components/SocialButtons";
-import {AppBar, CssBaseline} from '@mui/material';
+import {AppBar, CssBaseline, Slide, Grid} from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const HomePage = () => {
@@ -14,19 +14,20 @@ const HomePage = () => {
       mode: mode,
     },
   });
+
   return (
     <div className="HomePage">
       <ThemeProvider theme={darkTheme}>
         <CssBaseline/>
-        <AppBar className='HomePage-header' color='inherit' elevation={0} position='sticky' sx={{paddingTop:'1%'}}>
-          <HeaderContainer mode={mode} setMode={setMode}/>
-        </AppBar>
-        <AboutBodyContainer/>
-        <ProjectBodyContainer/>
-        <AppBar className='SocialButtons' color='transparent' position='sticky' elevation={0} sx={{bottom: '2%'}}>
-          <SocialButtons/>
-        </AppBar>
-        <FooterContainer/>
+          <AppBar className='HomePage-header' color='inherit' elevation={0} position='sticky' sx={{paddingTop:'1%'}}>
+            <HeaderContainer mode={mode} setMode={setMode}/>
+          </AppBar>
+          <AboutBodyContainer/>
+          <ProjectBodyContainer/>
+          <AppBar className='SocialButtons' color='transparent' position='sticky' elevation={0} sx={{bottom: '2%'}}>
+            <SocialButtons/>
+          </AppBar>
+          <FooterContainer/>
       </ThemeProvider>  
     </div>
   );

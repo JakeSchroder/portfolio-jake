@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Grid, Paper, Typography } from '@mui/material';
+import { Grid, Typography, Button, Slide } from '@mui/material';
 import ProjectCardComponent from '../components/ProjectCard';
+import { useInView } from 'react-intersection-observer';
 
 export default function ProjectBody() {
     const projectData=[
@@ -14,27 +15,41 @@ export default function ProjectBody() {
         {
             'name': 'Portfolio Site',
             'gitPage': 'https://github.com/JakeSchroder/portfolio-jake',
-            'link': 'https://github.com/JakeSchroder/portfolio-jake',
+            'link': 'http://jake-schroder.com',
             'text': 'ReactJS, NGINX',
             'img': '/portfolio-card.png'
         }
     ]
-      
+    
+    const { ref, inView, entry } = useInView({
+        threshold: .2,
+        delay: 300
+    });
+
     return (
-        <Grid>
-            <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" sx={{paddingBottom:5}}>
-                <Typography variant='h3' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal'}}><b>Projects</b></Typography>
+        <Grid ref={ref} container sx={{paddingBottom:'15%'}}>
+            <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" sx={{paddingBottom:'2%'}}>
+                <Typography variant='h3' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal'}}><b>What I've worked on</b></Typography>
             </Grid>
-            <Grid container
-                direction="row"
-                justifyContent="space-around"
-                alignItems="center"
-                columns={4}
-                rowSpacing={1}
-                sx={{paddingLeft:'10%', paddingRight:'10%', paddingBottom:'10%', margin:0}}
-            >
-                {projectData.map((project, index) => ProjectCardComponent({...project}, index))}
-            </Grid>
+            <Slide direction="up" in={inView} timeout={{enter:1000, exit:0}} mountOnEnter unmountOnExit>
+                <Grid container>
+                    <Grid container
+                        direction="row"
+                        justifyContent="space-around"
+                        alignItems="center"
+                        columns={4}
+                        rowSpacing={1}
+                        sx={{paddingLeft:'10%', paddingRight:'10%', paddingBottom:'3%', margin:0}}>
+                        {projectData.map((project, index) => ProjectCardComponent({...project}, index))}
+                    </Grid>
+                    <Grid  item xs={12} display="flex" justifyContent="center" alignItems="center">
+                        <Button variant="contained" color="secondary" href='https://github.com/JakeSchroder' target="_blank" sx={{borderRadius: 28}}>
+                            See more
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Slide>
         </Grid>
+
     );
   }
