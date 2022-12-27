@@ -3,7 +3,7 @@ import { Grid, Toolbar, Button, IconButton, keyframes} from '@mui/material';
 import MessageFormComponent from '../components/MessageForm';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import NightsStayIcon from '@mui/icons-material/NightsStay';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 export default function Header({mode, setMode}) {
     const [clicked, setClicked] = useState(false);
@@ -12,7 +12,7 @@ export default function Header({mode, setMode}) {
             transform: scale(1) rotateZ(0);
         }
         50% {
-            transform: scale(2) rotateZ(180deg);
+            transform: scale(.75) rotateZ(180deg);
         }
         100% {
             transform: scale(1) rotateZ(360deg);
@@ -26,7 +26,7 @@ export default function Header({mode, setMode}) {
     };
     const goToProjects = () => {
         window.scrollTo({
-            top: window.innerHeight*.85,
+            top: window.innerHeight*1.1,
             behavior: "smooth",
         });
     };
@@ -48,7 +48,7 @@ export default function Header({mode, setMode}) {
                     Resume
                 </Button>
                 <IconButton size="large" onClick={toggleDarkMode} sx={{ animation: clicked ? `${rotateScaleUp} .5s linear both` : ''}}>
-                    {mode === 'dark' ? <LightModeIcon fontSize='inherit' /> : <NightsStayIcon fontSize='inherit'/>}
+                    {mode === 'dark' ? <LightModeIcon fontSize='inherit' /> : <DarkModeIcon fontSize='inherit'/>}
                 </IconButton>
             </Toolbar>
         </Grid>

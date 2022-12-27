@@ -1,11 +1,28 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Grid, Button, Typography, Slide} from '@mui/material';
+import { Grid, Button, Typography, Slide, keyframes} from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import CallMadeIcon from '@mui/icons-material/CallMade';
+import {ReactComponent as PythonIcon} from '../assets/icons/python.svg';
+import { ReactComponent as ReactIcon } from '../assets/icons/react.svg';
+import { ReactComponent as MongoIcon } from '../assets/icons/mongodb.svg';
+import { ReactComponent as NodeIcon } from '../assets/icons/nodedotjs.svg';
+import { ReactComponent as NGINXIcon } from '../assets/icons/nginx.svg';
 
-export default function AboutBody() {
+export default function AboutBody({mode}) {
+    const pulsateForward = keyframes`
+    0%{
+        transform:scale(1)
+    }
+    50%{
+        transform:scale(1.2)
+    }
+    100%{
+        transform:scale(1)
+    }`;
+    const pulsateFwdAnime = `${pulsateForward} 10s ease-in-out infinite both`;
+
     return (
-        <Grid container elevation={0} sx={{paddingTop:'8%', paddingBottom:'20%'}}>
+        <Grid container elevation={0} sx={{paddingTop:'5%', paddingBottom:'20%'}}>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" sx={{paddingBottom:5}}>
                 <Avatar xs={12} alt="Jake Schroder" sx={{alignItems:'center', width:200, height:200}} src="https://media-exp1.licdn.com/dms/image/C4E03AQHZEsmrh6UFzA/profile-displayphoto-shrink_800_800/0/1525228018391?e=1675900800&v=beta&t=iNC2sXrGdInf5Ucm8dgALOitU6uH7xiM3Yw3-iXUBp8"/>
             </Grid>
@@ -20,10 +37,28 @@ export default function AboutBody() {
                     <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
                         <Typography variant='h6' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal'}}>A Frontend Developer and Visual Designer with experience in web design and machine learning.</Typography>
                     </Grid>
-                    <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
+                    <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" sx={{paddingTop:'1%'}}>
                         <Button variant="contained" color="secondary" href='/Resume-FullStack.pdf' target="_blank" sx={{borderRadius: 28}} endIcon={<CallMadeIcon/>}>Resume</Button>
                     </Grid>
+                    <Grid container justifyContent="center" sx={{paddingTop:'6%', paddingBottom:0}}>
+                        <Button href='https://www.python.org/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
+                            {mode === 'dark' ? <PythonIcon fill="white"/> : <PythonIcon fill="black"/>}
+                        </Button>
+                        <Button href='https://reactjs.org/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
+                            {mode === 'dark' ? <ReactIcon fill="white"/> : <ReactIcon fill="black"/>}
+                        </Button>
+                        <Button href='https://www.mongodb.com/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
+                            {mode === 'dark' ? <MongoIcon fill="white"/> : <MongoIcon fill="black"/>}
+                        </Button>
+                        <Button href='https://nodejs.org/en/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
+                            {mode === 'dark' ? <NodeIcon fill="white"/> : <NodeIcon fill="black"/>}
+                        </Button>
+                        <Button href='https://www.nginx.com/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
+                            {mode === 'dark' ? <NGINXIcon fill="white"/> : <NGINXIcon fill="black"/>}
+                        </Button>
+                    </Grid>
                 </Grid>
+                
             </Slide>
         </Grid>
     );

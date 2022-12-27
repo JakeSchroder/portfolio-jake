@@ -10,14 +10,14 @@ export default function ProjectBody() {
             'gitPage': 'https://github.com/JakeSchroder/EverythingEverywhere',
             'link': 'http://www.packrat.shop',
             'text': 'ReactJS, NodeJS, ExpressJS, MongoDB, Python',
-            'img': '/packrat-card.png'
+            'img': '/images/packrat-card.png'
         },
         {
             'name': 'Portfolio Site',
             'gitPage': 'https://github.com/JakeSchroder/portfolio-jake',
             'link': 'http://jake-schroder.com',
             'text': 'ReactJS, NGINX',
-            'img': '/portfolio-card.png'
+            'img': '/images/portfolio-card.png'
         }
     ]
     
