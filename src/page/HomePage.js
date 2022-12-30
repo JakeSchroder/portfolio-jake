@@ -3,7 +3,8 @@ import HeaderContainer from "../containers/Header";
 import FooterContainer from '../containers/Footer';
 import ProjectBodyContainer from '../containers/ProjectBody';
 import AboutBodyContainer from '../containers/AboutBody';
-import SocialButtons from "../components/SocialButtons";
+import SocialButtons from '../components/SocialButtons';
+import ResumeBodyContainer from '../containers/ResumeBody';
 import {AppBar, CssBaseline} from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -24,6 +25,7 @@ const HomePage = () => {
           </AppBar>
           <AboutBodyContainer mode={mode}/>
           <ProjectBodyContainer/>
+          <ResumeBodyContainer/>
           <AppBar className='SocialButtons' color='transparent' position='sticky' elevation={0} sx={{bottom: '2%'}}>
             <SocialButtons/>
           </AppBar>

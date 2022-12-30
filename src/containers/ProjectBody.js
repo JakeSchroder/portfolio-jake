@@ -23,7 +23,8 @@ export default function ProjectBody() {
     
     const { ref, inView, entry } = useInView({
         threshold: .2,
-        delay: 300
+        delay: 300,
+        triggerOnce: true
     });
 
     return (
