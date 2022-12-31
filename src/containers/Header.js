@@ -30,6 +30,12 @@ export default function Header({mode, setMode}) {
             behavior: "smooth",
         });
     };
+    const goToResume = () => {
+        window.scrollTo({
+            top: window.innerHeight*2.5,
+            behavior: "smooth",
+        });
+    };
     const toggleDarkMode = () =>{
         setClicked(true)
         setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
@@ -44,7 +50,7 @@ export default function Header({mode, setMode}) {
                 <Button color="inherit" onClick={goToAbout}>About</Button>
                 <Button color="inherit" onClick={goToProjects}>Projects</Button>
                 <MessageFormComponent/>
-                <Button variant="contained" color="secondary" href='/Resume-FullStack.pdf' target="_blank" sx={{borderRadius: 28}} endIcon={<CallMadeIcon/>}>
+                <Button variant="contained" color="secondary" onClick={goToResume} sx={{borderRadius: 28}} endIcon={<CallMadeIcon/>}>
                     Resume
                 </Button>
                 <IconButton size="large" onClick={toggleDarkMode} sx={{ animation: clicked ? `${rotateScaleUp} .5s linear both` : ''}}>

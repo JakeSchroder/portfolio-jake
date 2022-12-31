@@ -28,7 +28,7 @@ export default function ProjectBody() {
     });
 
     return (
-        <Grid ref={ref} container sx={{paddingBottom:'15%'}}>
+        <Grid ref={ref} container>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" sx={{paddingBottom:'2%'}}>
                 <Typography variant='h3' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal'}}><b>What I've worked on</b></Typography>
             </Grid>

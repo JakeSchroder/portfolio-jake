@@ -28,7 +28,7 @@ export default function MessageForm() {
             autoFocus
             margin="dense"
             id="name"
-            label="Your Name"
+            label="Name"
             type="name"
             variant="outlined"
             color='secondary'
@@ -37,7 +37,7 @@ export default function MessageForm() {
             autoFocus
             margin="dense"
             id="email"
-            label="Your Email"
+            label="Email"
             type="email"
             variant="outlined"
             color='secondary'

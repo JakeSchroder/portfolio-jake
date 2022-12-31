@@ -6,10 +6,8 @@ import {Grid} from '@mui/material';
 
 export default function ResumeView(){
     return (
-        <Grid container justifyContent='center'>
-            <Document file="/Resume-FullStack.pdf">
-                <Page pageNumber={1} />
-            </Document>
-        </Grid>
+        <Document file="/Resume-FullStack.pdf">
+            <Page pageNumber={1} height={700}/>
+        </Document>
     );
 }

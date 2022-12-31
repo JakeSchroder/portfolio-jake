@@ -5,7 +5,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function Footer() {
     return (
-        <Grid container justifyContent='center' sx={{backgroundColor:'#8E24AA', height:'160px'}}>
+        <Grid container justifyContent='center' >
+            <hr width='75%' />
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
                 <Typography sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal'}}>
                     <b>Jake.Schroder@gmail.com</b>
@@ -24,7 +25,6 @@ export default function Footer() {
                     <b>Jake Schroder, 2022. All Rights Reserved</b>
                 </Typography>
             </Grid>
-
         </Grid>
     );
   }
