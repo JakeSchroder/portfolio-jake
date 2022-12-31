@@ -10,24 +10,25 @@ export default function ProjectBody() {
             'gitPage': 'https://github.com/JakeSchroder/EverythingEverywhere',
             'link': 'http://www.packrat.shop',
             'text': 'ReactJS, NodeJS, ExpressJS, MongoDB, Python',
-            'img': '/packrat-card.png'
+            'img': '/images/packrat-card.png'
         },
         {
             'name': 'Portfolio Site',
             'gitPage': 'https://github.com/JakeSchroder/portfolio-jake',
             'link': 'http://jake-schroder.com',
             'text': 'ReactJS, NGINX',
-            'img': '/portfolio-card.png'
+            'img': '/images/portfolio-card.png'
         }
     ]
     
     const { ref, inView, entry } = useInView({
         threshold: .2,
-        delay: 300
+        delay: 300,
+        triggerOnce: true
     });
 
     return (
-        <Grid ref={ref} container sx={{paddingBottom:'15%'}}>
+        <Grid ref={ref} container>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" sx={{paddingBottom:'2%'}}>
                 <Typography variant='h3' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal'}}><b>What I've worked on</b></Typography>
             </Grid>

@@ -3,8 +3,9 @@ import HeaderContainer from "../containers/Header";
 import FooterContainer from '../containers/Footer';
 import ProjectBodyContainer from '../containers/ProjectBody';
 import AboutBodyContainer from '../containers/AboutBody';
-import SocialButtons from "../components/SocialButtons";
-import {AppBar, CssBaseline, Slide, Grid} from '@mui/material';
+import SocialButtons from '../components/SocialButtons';
+import ResumeBodyContainer from '../containers/ResumeBody';
+import {AppBar, CssBaseline, Grid} from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const HomePage = () => {
@@ -22,11 +23,16 @@ const HomePage = () => {
           <AppBar className='HomePage-header' color='inherit' elevation={0} position='sticky' sx={{paddingTop:'1%'}}>
             <HeaderContainer mode={mode} setMode={setMode}/>
           </AppBar>
-          <AboutBodyContainer/>
-          <ProjectBodyContainer/>
-          <AppBar className='SocialButtons' color='transparent' position='sticky' elevation={0} sx={{bottom: '2%'}}>
-            <SocialButtons/>
-          </AppBar>
+          <Grid container justifyContent='space-between' rowGap={28}>
+            <AboutBodyContainer mode={mode}/>
+            <hr width='75%' />
+            <ProjectBodyContainer/>
+            <hr width='75%' />
+            <ResumeBodyContainer/>
+            <AppBar className='SocialButtons' color='transparent' position='sticky' elevation={0} sx={{bottom: '2%'}}>
+              <SocialButtons/>
+            </AppBar>
+          </Grid>
           <FooterContainer/>
       </ThemeProvider>  
     </div>
