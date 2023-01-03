@@ -6,7 +6,7 @@ import { ReactComponent as ReactIcon } from '../assets/icons/react.svg';
 import { ReactComponent as MongoIcon } from '../assets/icons/mongodb.svg';
 import { ReactComponent as NodeIcon } from '../assets/icons/nodedotjs.svg';
 import { ReactComponent as NGINXIcon } from '../assets/icons/nginx.svg';
-import { iconFillColor } from "../components/SiteThemes";
+import { iconFillColor, lightIconFillColor} from "../components/SiteThemes";
 
 export default function AboutBody({mode}) {
     const pulsateForward = keyframes`
@@ -56,19 +56,19 @@ export default function AboutBody({mode}) {
                     </Grid>
                     <Grid container justifyContent="center" sx={{paddingTop:'6%', paddingBottom:0}}>
                         <Button href='https://www.python.org/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            <PythonIcon fill={iconFillColor} />
+                            <PythonIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
                         </Button>
                         <Button href='https://reactjs.org/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            <ReactIcon fill={iconFillColor} />
+                            <ReactIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
                         </Button>
                         <Button href='https://www.mongodb.com/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            <MongoIcon fill={iconFillColor} />
+                            <MongoIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
                         </Button>
                         <Button href='https://nodejs.org/en/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            <NodeIcon fill={iconFillColor} />
+                            <NodeIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
                         </Button>
                         <Button href='https://www.nginx.com/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            <NGINXIcon fill={iconFillColor} />
+                            <NGINXIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
                         </Button>
                     </Grid>
                 </Grid>

@@ -44,12 +44,12 @@ export const lightBlueTheme = createTheme ({
 
 export const purpleTheme = createTheme ({
   palette: {
-    primary: {
+    secondary: {
       main: '#a96f8b',
       light: '#db9ebb',
       dark: '#79435e',
     },
-    secondary: {
+    primary: {
       main: '#85ab55',
       light: '#b6dd83',
       dark: '#567c28',
@@ -64,4 +64,4 @@ export const purpleTheme = createTheme ({
 });
 
 export const iconFillColor = lightBlueTheme.palette.secondary.light
-
+export const lightIconFillColor = purpleTheme.palette.secondary.light
