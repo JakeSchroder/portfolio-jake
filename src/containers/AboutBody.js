@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Grid, Button, Typography, Slide, keyframes} from '@mui/material';
 import Avatar from '@mui/material/Avatar';
-import CallMadeIcon from '@mui/icons-material/CallMade';
 import {ReactComponent as PythonIcon} from '../assets/icons/python.svg';
 import { ReactComponent as ReactIcon } from '../assets/icons/react.svg';
 import { ReactComponent as MongoIcon } from '../assets/icons/mongodb.svg';
@@ -50,7 +49,7 @@ export default function AboutBody({mode}) {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" sx={{paddingTop:'1%'}}>
-                        <Button variant="contained" color="secondary" onClick={goToResume} sx={{borderRadius: 28}} endIcon={<CallMadeIcon/>}>
+                        <Button variant="contained" color="secondary" onClick={goToResume} sx={{borderRadius: 28}}>
                             Resume
                         </Button>
                     </Grid>

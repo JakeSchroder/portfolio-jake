@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Grid, Toolbar, Button, IconButton, keyframes} from '@mui/material';
 import MessageFormComponent from '../components/MessageForm';
-import CallMadeIcon from '@mui/icons-material/CallMade';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
@@ -50,7 +49,7 @@ export default function Header({mode, setMode}) {
                 <Button color="inherit" onClick={goToAbout}>About</Button>
                 <Button color="inherit" onClick={goToProjects}>Projects</Button>
                 <MessageFormComponent/>
-                <Button variant="contained" color="secondary" onClick={goToResume} sx={{borderRadius: 28}} endIcon={<CallMadeIcon/>}>
+                <Button variant="contained" color="secondary" onClick={goToResume} sx={{borderRadius: 28}} >
                     Resume
                 </Button>
                 <IconButton size="large" onClick={toggleDarkMode} sx={{ animation: clicked ? `${rotateScaleUp} .5s linear both` : ''}}>
