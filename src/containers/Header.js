@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Grid, Toolbar, Button, IconButton, keyframes} from '@mui/material';
 import MessageFormComponent from '../components/MessageForm';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { iconFillColor } from "../components/SiteThemes";
 
 export default function Header({mode, setMode}) {
     const [clicked, setClicked] = useState(false);
@@ -53,7 +54,7 @@ export default function Header({mode, setMode}) {
                     Resume
                 </Button>
                 <IconButton size="large" onClick={toggleDarkMode} sx={{ animation: clicked ? `${rotateScaleUp} .5s linear both` : ''}}>
-                    {mode === 'dark' ? <LightModeIcon fontSize='inherit' /> : <DarkModeIcon fontSize='inherit'/>}
+                    {mode === 'dark' ? <Brightness7Icon fontSize='inherit' /> : <Brightness4Icon fontSize='inherit'/>}
                 </IconButton>
             </Toolbar>
         </Grid>

@@ -7,18 +7,14 @@ import SocialButtons from '../components/SocialButtons';
 import ResumeBodyContainer from '../containers/ResumeBody';
 import {AppBar, CssBaseline, Grid} from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { darkBlueTheme, lightBlueTheme, purpleTheme } from "../components/SiteThemes";
 
 const HomePage = () => {
   const [mode, setMode] = useState('dark');
-  const darkTheme = createTheme({
-    palette: {
-      mode: mode,
-    },
-  });
 
   return (
     <div className="HomePage">
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={mode === 'light' ? purpleTheme:darkBlueTheme}>
         <CssBaseline/>
           <AppBar className='HomePage-header' color='inherit' elevation={0} position='sticky' sx={{paddingTop:'1%'}}>
             <HeaderContainer mode={mode} setMode={setMode}/>
