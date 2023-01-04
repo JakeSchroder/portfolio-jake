@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Grid, Button, Typography, Slide, keyframes} from '@mui/material';
 import Avatar from '@mui/material/Avatar';
-import CallMadeIcon from '@mui/icons-material/CallMade';
 import {ReactComponent as PythonIcon} from '../assets/icons/python.svg';
 import { ReactComponent as ReactIcon } from '../assets/icons/react.svg';
 import { ReactComponent as MongoIcon } from '../assets/icons/mongodb.svg';
 import { ReactComponent as NodeIcon } from '../assets/icons/nodedotjs.svg';
 import { ReactComponent as NGINXIcon } from '../assets/icons/nginx.svg';
+import { iconFillColor, lightIconFillColor} from "../components/SiteThemes";
 
 export default function AboutBody({mode}) {
     const pulsateForward = keyframes`
@@ -50,25 +50,25 @@ export default function AboutBody({mode}) {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" sx={{paddingTop:'1%'}}>
-                        <Button variant="contained" color="secondary" onClick={goToResume} sx={{borderRadius: 28}} endIcon={<CallMadeIcon/>}>
+                        <Button variant="contained" color="secondary" onClick={goToResume} sx={{borderRadius: 28}}>
                             Resume
                         </Button>
                     </Grid>
                     <Grid container justifyContent="center" sx={{paddingTop:'6%', paddingBottom:0}}>
                         <Button href='https://www.python.org/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            {mode === 'dark' ? <PythonIcon fill="white"/> : <PythonIcon fill="black"/>}
+                            <PythonIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
                         </Button>
                         <Button href='https://reactjs.org/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            {mode === 'dark' ? <ReactIcon fill="white"/> : <ReactIcon fill="black"/>}
+                            <ReactIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
                         </Button>
                         <Button href='https://www.mongodb.com/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            {mode === 'dark' ? <MongoIcon fill="white"/> : <MongoIcon fill="black"/>}
+                            <MongoIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
                         </Button>
                         <Button href='https://nodejs.org/en/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            {mode === 'dark' ? <NodeIcon fill="white"/> : <NodeIcon fill="black"/>}
+                            <NodeIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
                         </Button>
                         <Button href='https://www.nginx.com/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            {mode === 'dark' ? <NGINXIcon fill="white"/> : <NGINXIcon fill="black"/>}
+                            <NGINXIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
                         </Button>
                     </Grid>
                 </Grid>

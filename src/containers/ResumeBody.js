@@ -12,7 +12,7 @@ export default function ResumeBody() {
                 </Typography>
             </Grid>
             <Grid container display='flex' justifyContent='center' >
-                <Button href='/Resume-FullStack.pdf' download={true} startIcon={<ArrowCircleDownIcon />} sx={{right:'-14%'}}>
+                <Button href='/Resume-FullStack.pdf' download={true} color='secondary' startIcon={<ArrowCircleDownIcon />} sx={{right:'-14%'}}>
                     Download
                 </Button> 
                 <Grid container display="flex" justifyContent="center">
