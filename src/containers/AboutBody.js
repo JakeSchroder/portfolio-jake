@@ -6,9 +6,8 @@ import { ReactComponent as ReactIcon } from '../assets/icons/react.svg';
 import { ReactComponent as MongoIcon } from '../assets/icons/mongodb.svg';
 import { ReactComponent as NodeIcon } from '../assets/icons/nodedotjs.svg';
 import { ReactComponent as NGINXIcon } from '../assets/icons/nginx.svg';
-import { iconFillColor, lightIconFillColor} from "../components/SiteThemes";
 
-export default function AboutBody({mode}) {
+export default function AboutBody({theme}) {
     const pulsateForward = keyframes`
     0%{
         transform:scale(1)
@@ -50,25 +49,25 @@ export default function AboutBody({mode}) {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" sx={{paddingTop:'1%'}}>
-                        <Button variant="contained" color="secondary" onClick={goToResume} sx={{borderRadius: 28}}>
+                        <Button variant="contained" color="secondary" onClick={goToResume} sx={{borderRadius: 28, color: theme.palette.primary.contrastText}}>
                             Resume
                         </Button>
                     </Grid>
                     <Grid container justifyContent="center" sx={{paddingTop:'6%', paddingBottom:0}}>
                         <Button href='https://www.python.org/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            <PythonIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
+                            <PythonIcon fill={theme.palette.secondary.light} />
                         </Button>
                         <Button href='https://reactjs.org/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            <ReactIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
+                            <ReactIcon fill={theme.palette.secondary.light} />
                         </Button>
                         <Button href='https://www.mongodb.com/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            <MongoIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
+                            <MongoIcon fill={theme.palette.secondary.light} />
                         </Button>
                         <Button href='https://nodejs.org/en/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            <NodeIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
+                            <NodeIcon fill={theme.palette.secondary.light} />
                         </Button>
                         <Button href='https://www.nginx.com/' target='_blank' sx={{backgroundColor:'transparent', animation: pulsateFwdAnime}}>
-                            <NGINXIcon fill={mode === 'light' ? lightIconFillColor:iconFillColor} />
+                            <NGINXIcon fill={theme.palette.secondary.light} />
                         </Button>
                     </Grid>
                 </Grid>

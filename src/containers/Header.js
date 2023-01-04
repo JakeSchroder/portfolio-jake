@@ -3,9 +3,10 @@ import { Grid, Toolbar, Button, IconButton, keyframes} from '@mui/material';
 import MessageFormComponent from '../components/MessageForm';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
-import { iconFillColor } from "../components/SiteThemes";
 
-export default function Header({mode, setMode}) {
+export default function Header({colorMode, setColorMode, theme}) {
+  
+
     const [clicked, setClicked] = useState(false);
     const rotateScaleUp = keyframes`
         0% {
@@ -38,7 +39,7 @@ export default function Header({mode, setMode}) {
     };
     const toggleDarkMode = () =>{
         setClicked(true)
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
+        setColorMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
         setTimeout(() => {
             setClicked(false)
         }, 500)
@@ -46,15 +47,15 @@ export default function Header({mode, setMode}) {
 
     return (
         <Grid container justifyContent='center' rowGap={0}>
-            <Toolbar >
+            <Toolbar>
                 <Button color="inherit" onClick={goToAbout}>About</Button>
                 <Button color="inherit" onClick={goToProjects}>Projects</Button>
                 <MessageFormComponent/>
-                <Button variant="contained" color="secondary" onClick={goToResume} sx={{borderRadius: 28}} >
+                <Button variant="contained" color="secondary" onClick={goToResume} sx={{borderRadius: 28, color: theme.palette.primary.contrastText}} >
                     Resume
                 </Button>
                 <IconButton size="large" onClick={toggleDarkMode} sx={{ animation: clicked ? `${rotateScaleUp} .5s linear both` : ''}}>
-                    {mode === 'dark' ? <Brightness7Icon fontSize='inherit' /> : <Brightness4Icon fontSize='inherit'/>}
+                    {colorMode === 'dark' ? <Brightness7Icon fontSize='inherit' sx={{fill: theme.palette.secondary.light}} /> : <Brightness4Icon fontSize='inherit' sx={{fill: theme.palette.secondary.light}}/>}
                 </IconButton>
             </Toolbar>
         </Grid>
