@@ -2,7 +2,7 @@
 # Portfolio - Jake Schroder
 
 This is a portfolio site made to display who I am, what I've worked on, and a bit of my creative 
-design side. Developed using ReactJS, NGINX, Docker, and Material UI. If you like it, feel free to adapt it 
+design side. Developed using [ReactJS](https://reactjs.org/), [NGINX](https://www.nginx.com/), [Docker](https://www.docker.com), and [MUI](https://mui.com/). If you like it, feel free to adapt it 
 for your own portfolio.
 
 
