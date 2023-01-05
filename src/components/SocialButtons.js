@@ -6,12 +6,12 @@ export default function SocialButtons({theme}){
     return (
         <Grid container>
             <Grid item xs={12} display="flex">
-                <IconButton size='large' target='_blank' href='https://github.com/JakeSchroder'>
+                <IconButton size='large' target='_blank' href='https://github.com/JakeSchroder' >
                     <GitHubIcon fontSize='inherit' sx={{fill: theme.palette.secondary.light}}/>
                 </IconButton>
             </Grid>
             <Grid item xs={12} display="flex">
-                <IconButton size='large' target='_blank' href='https://www.linkedin.com/in/jakeschroder/'>
+                <IconButton size='large' target='_blank' href='https://www.linkedin.com/in/jakeschroder/' >
                     <LinkedInIcon fontSize='inherit' sx={{fill: theme.palette.secondary.light}} />
                 </IconButton>
             </Grid>
