@@ -5,8 +5,8 @@ import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 
 export default function ResumeBody({theme}) {
     return (
-        <Grid container>
-            <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" sx={{paddingBottom:'2%'}}>
+        <Grid id='resumeBody' container>
+            <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
                 <Typography variant='h3' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal'}}>
                     Resume
                 </Typography>

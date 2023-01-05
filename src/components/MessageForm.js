@@ -63,8 +63,8 @@ export default function MessageForm() {
           />
         </DialogContent>
         <DialogActions>
-          <Button variant='outlined' color='primary' onClick={handleClose}>Cancel</Button>
           <Button variant='outlined' color='primary' onClick={handleClose}>Send</Button>
+          <Button variant='outlined' color='primary' onClick={handleClose}>Cancel</Button>
         </DialogActions>
       </Dialog>
     </div>
