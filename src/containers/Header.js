@@ -3,9 +3,11 @@ import { Grid, Toolbar, Button, IconButton, keyframes} from '@mui/material';
 import MessageFormComponent from '../components/MessageForm';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
-import { iconFillColor } from "../components/SiteThemes";
+import {Link} from 'react-scroll';
 
-export default function Header({mode, setMode}) {
+export default function Header({colorMode, setColorMode, theme}) {
+  
+
     const [clicked, setClicked] = useState(false);
     const rotateScaleUp = keyframes`
         0% {
@@ -18,27 +20,9 @@ export default function Header({mode, setMode}) {
             transform: scale(1) rotateZ(360deg);
         }`;
 
-    const goToAbout = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    };
-    const goToProjects = () => {
-        window.scrollTo({
-            top: window.innerHeight*1.1,
-            behavior: "smooth",
-        });
-    };
-    const goToResume = () => {
-        window.scrollTo({
-            top: window.innerHeight*2.5,
-            behavior: "smooth",
-        });
-    };
     const toggleDarkMode = () =>{
         setClicked(true)
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
+        setColorMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
         setTimeout(() => {
             setClicked(false)
         }, 500)
@@ -46,15 +30,17 @@ export default function Header({mode, setMode}) {
 
     return (
         <Grid container justifyContent='center' rowGap={0}>
-            <Toolbar >
-                <Button color="inherit" onClick={goToAbout}>About</Button>
-                <Button color="inherit" onClick={goToProjects}>Projects</Button>
+            <Toolbar>
+                <Button color="inherit" ><Link to='aboutBody' spy={true} smooth={true} offset={-90}>About</Link></Button>
+                <Button color="inherit"><Link to='projectBody' spy={true} smooth={true} offset={-230}>Projects</Link></Button>
                 <MessageFormComponent/>
-                <Button variant="contained" color="secondary" onClick={goToResume} sx={{borderRadius: 28}} >
-                    Resume
+                <Button variant="contained" color="secondary" sx={{borderRadius: 28, color: theme.palette.primary.contrastText}} >
+                    <Link to='resumeBody' spy={true} smooth={true} offset={-90}>
+                        Resume
+                    </Link>
                 </Button>
                 <IconButton size="large" onClick={toggleDarkMode} sx={{ animation: clicked ? `${rotateScaleUp} .5s linear both` : ''}}>
-                    {mode === 'dark' ? <Brightness7Icon fontSize='inherit' /> : <Brightness4Icon fontSize='inherit'/>}
+                    {colorMode === 'dark' ? <Brightness7Icon fontSize='inherit' sx={{fill: theme.palette.secondary.light}} /> : <Brightness4Icon fontSize='inherit' sx={{fill: theme.palette.secondary.light}}/>}
                 </IconButton>
             </Toolbar>
         </Grid>
