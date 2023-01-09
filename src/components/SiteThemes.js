@@ -38,12 +38,12 @@ export const lightBlueTheme = {
 };
 
 export const purpleTheme = {     
-  secondary: {
+  primary: {
     main: '#a96f8b',
     light: '#db9ebb',
     dark: '#79435e',
   },
-  primary: {
+  secondary: {
     main: '#85ab55',
     light: '#b6dd83',
     dark: '#567c28',
