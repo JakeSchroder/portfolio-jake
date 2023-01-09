@@ -30,26 +30,26 @@ export default function ProjectBody() {
     return (
         <Grid id='projectBody' ref={ref} container>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" sx={{paddingBottom:'2%'}}>
-                <Typography variant='h3' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal'}}><b>What I've worked on</b></Typography>
+                <Typography variant='h3' align='center' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal'}}>
+                    <b>What I've worked on</b>
+                </Typography>
             </Grid>
-            <Slide direction="up" in={inView} timeout={{enter:1000, exit:0}} mountOnEnter unmountOnExit>
-                <Grid container>
-                    <Grid container
-                        direction="row"
-                        justifyContent="space-around"
-                        alignItems="center"
-                        columns={4}
-                        rowSpacing={1}
-                        sx={{paddingLeft:'10%', paddingRight:'10%', paddingBottom:'3%', margin:0}}>
-                        {projectData.map((project, index) => ProjectCardComponent({...project}, index))}
-                    </Grid>
-                    <Grid  item xs={12} display="flex" justifyContent="center" alignItems="center">
-                        <Button variant="contained" color="secondary" href='https://github.com/JakeSchroder' target="_blank" sx={{borderRadius: 28}}>
-                            See more
-                        </Button>
-                    </Grid>
+            <Grid container>
+                <Grid container
+                    direction="row"
+                    justifyContent="space-around"
+                    alignItems="center"
+                    columns={4}
+                    rowSpacing={1}
+                    sx={{paddingLeft:'10%', paddingRight:'10%', paddingBottom:'3%', margin:0}}>
+                    {projectData.map((project, index) => ProjectCardComponent({...project}, index))}
                 </Grid>
-            </Slide>
+                <Grid  item xs={12} display="flex" justifyContent="center" alignItems="center">
+                    <Button variant="contained" color="secondary" href='https://github.com/JakeSchroder' target="_blank" sx={{borderRadius: 28}}>
+                        See more
+                    </Button>
+                </Grid>
+            </Grid>
         </Grid>
 
     );

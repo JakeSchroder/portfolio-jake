@@ -21,7 +21,7 @@ const HomePage = () => {
           <AppBar className='HomePage-header' color='inherit' elevation={0} position='sticky' sx={{paddingTop:'1%'}}>
             <HeaderContainer colorMode={colorMode} setColorMode={setColorMode} theme={theme}/>
           </AppBar>
-          <Grid container justifyContent='space-between' rowGap={28}>
+          <Grid container justifyContent='space-between' rowGap={28} sx={{paddingTop: '2%'}}>
             <AboutBodyContainer theme={theme}/>
             <hr width='75%' color={colorMode === 'light' ? theme.palette.secondary.dark : theme.palette.primary.contrastText}/>
             <ProjectBodyContainer/>
