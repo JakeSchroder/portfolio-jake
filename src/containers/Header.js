@@ -33,12 +33,12 @@ export default function Header({colorMode, setColorMode, theme}) {
             <Toolbar>
                 <Button color="inherit" ><Link to='aboutBody' spy={true} smooth={true} offset={-90}>About</Link></Button>
                 <Button color="inherit"><Link to='projectBody' spy={true} smooth={true} offset={-230}>Projects</Link></Button>
-                <MessageFormComponent/>
-                <Button variant="contained" color="secondary" sx={{borderRadius: 28, color: theme.palette.primary.contrastText}} >
+                <Button color='inherit'>
                     <Link to='resumeBody' spy={true} smooth={true} offset={-90}>
                         Resume
                     </Link>
                 </Button>
+                <MessageFormComponent/>
                 <IconButton size="large" onClick={toggleDarkMode} sx={{ animation: clicked ? `${rotateScaleUp} .5s linear both` : ''}}>
                     {colorMode === 'dark' ? <Brightness7Icon fontSize='inherit' sx={{fill: theme.palette.secondary.light}} /> : <Brightness4Icon fontSize='inherit' sx={{fill: theme.palette.secondary.light}}/>}
                 </IconButton>

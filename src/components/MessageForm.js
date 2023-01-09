@@ -14,7 +14,7 @@ export default function MessageForm() {
 
   return (
     <div>
-      <Button color="inherit" onClick={handleClickOpen}>
+      <Button variant="contained" color="secondary" onClick={handleClickOpen} sx={{borderRadius: 28}} >
         Contact
       </Button>
       <Dialog open={open} onClose={handleClose} maxWidth='sm'>
