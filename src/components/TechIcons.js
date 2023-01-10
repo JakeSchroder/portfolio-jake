@@ -19,7 +19,7 @@ export default function TechIcons({theme}){
     const pulsateFwdAnime = `${pulsateForward} 10s ease-in-out infinite both`;
 
     return(
-        <Grid item xs={1} display="flex" justifyContent="space-between" direction='column'position='relative' sx={{left:-40, paddingBottom:5, paddingRight:20}}>
+        <Grid item xs={1} display="flex" justifyContent="space-between" direction='column' position='relative' sx={{left:-40, paddingBottom:5, paddingRight:20}}>
             <Button href='https://www.python.org/' target='_blank' position='relative' sx={{left: -170, top: -30,backgroundColor:'transparent', animation: pulsateFwdAnime, animationDelay:'2s'}}>
                 <PythonIcon fill={theme.palette.secondary.light} />
             </Button>
