@@ -18,7 +18,7 @@ const HomePage = () => {
     <div className="HomePage">
       <ThemeProvider theme={theme}>
         <CssBaseline/>
-          <AppBar className='HomePage-header' color='inherit' elevation={0} position='sticky' sx={{paddingTop:'1%'}}>
+          <AppBar className='HomePage-header' color='transparent' elevation={0} position='sticky' sx={{paddingTop:'1%'}}>
             <HeaderContainer colorMode={colorMode} setColorMode={setColorMode} theme={theme}/>
           </AppBar>
           <Grid container justifyContent='space-between' rowGap={28} sx={{paddingTop: '2%'}}>

@@ -2,7 +2,8 @@ import {Grid, keyframes, Typography, Button} from "@mui/material"
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 
 export default function AboutBodyText({theme}){
-    const textShadowColor = theme.palette.primary.dark
+    const textColor = theme.palette.mode === 'light' ? theme.palette.secondary.light : theme.palette.primary.textColor
+    const textShadowColor = theme.palette.mode === 'light' ? theme.palette.primary.main : theme.palette.primary.dark
     const textShadowPopBR = keyframes `
     0% {
         text-shadow: 0 0 ${textShadowColor}, 0 0 ${textShadowColor}, 0 0 ${textShadowColor}, 0 0 ${textShadowColor}, 0 0 ${textShadowColor}, 0 0 ${textShadowColor}, 0 0 ${textShadowColor}, 0 0 ${textShadowColor};
@@ -19,18 +20,18 @@ export default function AboutBodyText({theme}){
     return(
         <Grid item xs={5} display="flex" justifyContent="center" position='relative' direction='column' sx={{top:30}}>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
-                <Typography variant='h3'  align='center' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal', animation: textShadowPopBRAnime}}>
+                <Typography color={textColor} variant='h3'  align='center' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal', animation: textShadowPopBRAnime}}>
                     <b>Hi, I'm Jake</b>
                 </Typography>
             </Grid>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
-                <Typography variant='h2' align='center' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal', animation: textShadowPopBRAnime}}>
+                <Typography color={textColor} variant='h2' align='center' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal', animation: textShadowPopBRAnime}}>
                     <b>Building digital products, brands, and experience</b>
                 </Typography>
             </Grid>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
-                <Typography variant='h6'  align='center' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal', animation: textShadowPopBRAnime}}>
-                    <b>A Frontend Developer and Visual Designer with experience in web design and machine learning.</b>
+                <Typography color={textColor} variant='h6'  align='center' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal', animation: textShadowPopBRAnime}}>
+                    <b>A Frontend Developer and Visual Designer with expertise in web design and machine learning.</b>
                 </Typography>
             </Grid>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
