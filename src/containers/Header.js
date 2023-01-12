@@ -27,13 +27,13 @@ export default function Header({colorMode, setColorMode, theme}) {
             setClicked(false)
         }, 500)
     }
-    const textColor = theme.palette.mode === 'light' ? "secondary" : "inherit"
+    const textColor = theme.palette.mode === 'light' ? theme.palette.background.default : "inherit"
     return (
         <Grid container justifyContent='center' rowGap={0}>
             <Toolbar sx={{backgroundColor:theme.palette.primary.dark, borderRadius:30}}>
-                <Button color={textColor} ><Link to='aboutBody' spy={true} smooth={true} offset={-90} sx={{fill:textColor}}>About</Link></Button>
-                <Button color={textColor}><Link to='projectBody' spy={true} smooth={true} offset={-230}>Projects</Link></Button>
-                <Button color={textColor}>
+                <Button  sx={{color: textColor}}><Link to='aboutBody' spy={true} smooth={true} offset={-90}>About</Link></Button>
+                <Button sx={{color: textColor}}><Link to='projectBody' spy={true} smooth={true} offset={-230}>Projects</Link></Button>
+                <Button sx={{color: textColor}}>
                     <Link to='resumeBody' spy={true} smooth={true} offset={-90}>
                         Resume
                     </Link>
