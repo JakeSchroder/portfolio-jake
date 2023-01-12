@@ -1,59 +1,42 @@
-export const darkBlueTheme = 
+export const darkTheme = 
   {
-    type: 'light',
+    type: 'dark',
     primary: {
-      main: '#00140e',
+      main: '#0d1c18',
       contrastText: '#def1db',
     },
     secondary: {
-      main: '#567c28',
+      main: '#85a655',
+      contrastText: '#0d1c18',
     },
     background: {
-      default: 'rgb(51, 67, 62)',
-      paper: 'rgb(51, 67, 62)',
+      default: '#32423d',
+      paper: '#5d6e68',
     },
     text: {
       primary: '#def1db',
-      secondary: '#def1db',
-      disabled: '#def1db',
-      hint: '#def1db',
     },
     mode: 'dark'
   };
 
-export const lightBlueTheme = {
-    type: 'light',
-    primary: {
-      main: '#003835',
-      contrastText: '#fff4f0',
-    },
-    secondary: {
-      main: '#85a655',
-    },
-    background: {
-      default: '#fff4f0',
-      paper: '#fff4f0',
-    },
-    mode: 'light'
-};
-
-export const purpleTheme = {     
+export const lightTheme = {
+  type: 'light',
   primary: {
-    main: '#a96f8b',
-    light: '#db9ebb',
-    dark: '#79435e',
+    main: '#405433',
+    contrastText: '#445d33',
   },
   secondary: {
-    main: '#85ab55',
-    light: '#b6dd83',
-    dark: '#567c28',
-    contrastText: '#000000',
+    main: '#85a655',
+    contrastText: '#182b0c',
   },
   background: {
-    default: '#f4e4f5',
-    paper: '#f4e4f5',
+    default: '#def1db',
+    paper: '#b7d9af',
   },
-mode: 'light'
+  text: {
+    primary: '#445d33',
+  },
+  mode: 'light'
 };
 
 // Update the theme only if the mode changes
@@ -61,6 +44,6 @@ export const getDesignTokens = (colorMode) => ({ //Need to set type parameter
   palette:{
     colorMode,
     ...(colorMode === 'light' ?
-    purpleTheme : darkBlueTheme)
+    lightTheme : darkTheme)
   }
 });
