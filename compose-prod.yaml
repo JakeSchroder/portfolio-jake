@@ -1,6 +1,7 @@
 version: "3"
 services:
   nginx-react:
+    image: portfolio-jake:prod
     container_name: nginx-react-app
     build:
       context: .
