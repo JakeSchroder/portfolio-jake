@@ -15,7 +15,7 @@ export default function ProjectBody() {
         {
             'name': 'Portfolio Site',
             'gitPage': 'https://github.com/JakeSchroder/portfolio-jake',
-            'link': 'http://jake-schroder.com',
+            'link': 'https://jake-schroder.com',
             'text': 'ReactJS, NGINX',
             'img': '/images/portfolio-card.png'
         }
