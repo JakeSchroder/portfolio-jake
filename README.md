@@ -9,7 +9,7 @@ for your own portfolio.
 
 ## Demo
 
-Live demo at http://jake-schroder.com
+Live demo at https://jake-schroder.com
 
 
 ## Run Locally
