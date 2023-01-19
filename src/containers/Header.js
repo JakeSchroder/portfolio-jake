@@ -31,15 +31,15 @@ export default function Header({colorMode, setColorMode, theme}) {
     return (
         <Grid container justifyContent='center' rowGap={0}>
             <Toolbar sx={{backgroundColor:theme.palette.primary.dark, borderRadius:30}}>
-                <Button  sx={{color: textColor}}><Link to='aboutBody' spy={true} smooth={true} offset={-90}>About</Link></Button>
-                <Button sx={{color: textColor}}><Link to='projectBody' spy={true} smooth={true} offset={-230}>Projects</Link></Button>
-                <Button sx={{color: textColor}}>
+                <Button aria-label="Move to about body" sx={{color: textColor}}><Link to='aboutBody' spy={true} smooth={true} offset={-90}>About</Link></Button>
+                <Button aria-label="Move to project body" sx={{color: textColor}}><Link to='projectBody' spy={true} smooth={true} offset={-230}>Projects</Link></Button>
+                <Button aria-label="Move to resume body" sx={{color: textColor}}>
                     <Link to='resumeBody' spy={true} smooth={true} offset={-90}>
                         Resume
                     </Link>
                 </Button>
                 <MessageFormComponent/>
-                <IconButton size="large" onClick={toggleDarkMode} sx={{ animation: clicked ? `${rotateScaleUp} .5s linear both` : ''}}>
+                <IconButton aria-label="Toggle light mode" size="large" onClick={toggleDarkMode} sx={{ animation: clicked ? `${rotateScaleUp} .5s linear both` : ''}}>
                     {colorMode === 'dark' ? <Brightness7Icon fontSize='inherit' sx={{fill: theme.palette.secondary.light}} /> : <Brightness4Icon fontSize='inherit' sx={{fill: theme.palette.secondary.light}}/>}
                 </IconButton>
             </Toolbar>

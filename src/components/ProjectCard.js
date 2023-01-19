@@ -40,6 +40,7 @@ export default function ProjectCard({
             component="img"
             width="300"     
             image={img}
+            alt={name}
           />
         </CardActionArea>
       </Card>

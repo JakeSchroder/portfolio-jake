@@ -5,7 +5,7 @@ import ProjectBodyContainer from '../containers/ProjectBody';
 import AboutBodyContainer from '../containers/AboutBody';
 import SocialButtons from '../components/SocialButtons';
 import ResumeBodyContainer from '../containers/ResumeBody';
-import { getDesignTokens } from "../components/SiteThemes";
+import { getDesignTokens } from "../assets/global/SiteThemes";
 import {AppBar, CssBaseline, Grid, useMediaQuery} from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
