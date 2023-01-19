@@ -6,7 +6,7 @@ import {Grid} from '@mui/material';
 
 export default function ResumeView(){
     return (
-        <Document file="/Resume-FullStack.pdf">
+        <Document file="/resume-jake-schroder-2023.pdf">
             <Page pageNumber={1} height={700}/>
         </Document>
     );
