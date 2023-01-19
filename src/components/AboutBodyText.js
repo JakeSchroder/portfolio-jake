@@ -22,7 +22,7 @@ export default function AboutBodyText({theme}){
         <Grid item xs={5} display="flex" justifyContent="center" position='relative' direction='column' sx={{top:30}}>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
                 <Typography color={textColor} variant='h3'  align='center' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal', animation: textShadowPopBRAnime}}>
-                    <b>Hi, I'm Jake</b>
+                    <b>Hi, I'm Jake!</b>
                 </Typography>
             </Grid>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
@@ -32,7 +32,7 @@ export default function AboutBodyText({theme}){
             </Grid>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
                 <Typography color={textColor} variant='h6'  align='center' sx={{fontFamily:'solano-gothic-pro-mvb, sans-serif', fontWeight:'500', fontStyle: 'normal', animation: textShadowPopBRAnime}}>
-                    <b>A Frontend Developer and Visual Designer with expertise in web design and machine learning.</b>
+                    <b>A technically experienced, creative, and self-driven Fullstack Developer and Visual Designer with expertise in Frontend Development.</b>
                 </Typography>
             </Grid>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
