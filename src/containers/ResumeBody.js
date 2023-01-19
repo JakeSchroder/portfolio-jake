@@ -2,6 +2,7 @@ import * as React from 'react';
 import {Typography, Grid, Box, Paper, Card, Button} from '@mui/material';
 import ResumeViewComponent from '../components/ResumeView';
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import { ResumePDF } from '../assets/global/FileVariables';
 
 export default function ResumeBody({theme}) {
     return (
@@ -12,7 +13,7 @@ export default function ResumeBody({theme}) {
                 </Typography>
             </Grid>
             <Grid container display='flex' justifyContent='center' >
-                <Button href='/Resume-FullStack.pdf' download={true} color='inherit' startIcon={<ArrowCircleDownIcon />} sx={{right:'-14%'}}>
+                <Button href={ResumePDF} download={true} color='inherit' startIcon={<ArrowCircleDownIcon />} sx={{right:'-14%'}}>
                     Download
                 </Button> 
                 <Grid container display="flex" justifyContent="center">

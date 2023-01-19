@@ -1,5 +1,6 @@
 import {Grid, keyframes, Typography, Button} from "@mui/material"
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import { ResumePDF } from '../assets/global/FileVariables';
 
 export default function AboutBodyText({theme}){
     const textColor = theme.palette.mode === 'light' ? theme.palette.secondary.light : theme.palette.primary.textColor
@@ -35,7 +36,7 @@ export default function AboutBodyText({theme}){
                 </Typography>
             </Grid>
             <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
-                <Button href='/Resume-FullStack.pdf' download={true} variant='text' endIcon={<ArrowCircleDownIcon />} size='large' sx={{color: theme.palette.primary.contrastText}}>
+                <Button href={ResumePDF} download={true} variant='text' endIcon={<ArrowCircleDownIcon />} size='large' sx={{color: theme.palette.primary.contrastText}}>
                     Resume
                 </Button>
             </Grid>
