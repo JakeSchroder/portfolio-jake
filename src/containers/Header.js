@@ -31,11 +31,19 @@ export default function Header({colorMode, setColorMode, theme}) {
     return (
         <Grid container justifyContent='center' rowGap={0}>
             <Toolbar sx={{backgroundColor:theme.palette.primary.dark, borderRadius:30}}>
-                <Button aria-label="Move to about body" sx={{color: textColor}}><Link to='aboutBody' spy={true} smooth={true} offset={-90}>About</Link></Button>
-                <Button aria-label="Move to project body" sx={{color: textColor}}><Link to='projectBody' spy={true} smooth={true} offset={-230}>Projects</Link></Button>
+                <Button aria-label="Move to about body" sx={{color: textColor}}>
+                    <Link to='aboutBody' spy={true} smooth={true} offset={-90}>
+                        <b>About</b>
+                    </Link>
+                </Button>
+                <Button aria-label="Move to project body" sx={{color: textColor}}>
+                    <Link to='projectBody' spy={true} smooth={true} offset={-230}>
+                        <b>Projects</b>
+                    </Link>
+                </Button>
                 <Button aria-label="Move to resume body" sx={{color: textColor}}>
                     <Link to='resumeBody' spy={true} smooth={true} offset={-90}>
-                        Resume
+                        <b>Resume</b>
                     </Link>
                 </Button>
                 <MessageFormComponent/>
