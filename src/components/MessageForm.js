@@ -32,7 +32,7 @@ export default function MessageForm() {
         <DialogContent>
           <DialogContentText>
             If you'd like to contact me about an opportunity then please fill out these boxes. 
-            I will be sent an email with all of the details!
+            I will be sent a message with all of the details!
           </DialogContentText>
           <Grid container justifyContent='space-between'>
             <Grid item>
