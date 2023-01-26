@@ -1,12 +1,12 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import {Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid} from '@mui/material';
 import {useForm} from "react-hook-form";
+import Reaptcha from 'reaptcha';
 
 export default function MessageForm() {
   const [open, setOpen] = useState(false);//Pass down this variable from the home page
   const {register, handleSubmit, watch, reset, formState: {errors} } = useForm();
   const onSubmit = data => console.log(data);
-  
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -19,6 +19,12 @@ export default function MessageForm() {
       email: '',
       message: '',
     });
+  };
+
+  //reCAPTCHA state functions
+  const [verified, setVerified] = useState(false);
+  const onVerify = recaptchaResponse => {
+    setVerified(true)
   };
 
 
@@ -87,8 +93,15 @@ export default function MessageForm() {
           />
         </DialogContent>
         <DialogActions>
-          <Button variant='outlined' color='primary' onClick={handleClose}>Cancel</Button>
-          <Button variant='outlined' color='primary' onClick={handleSubmit(onSubmit)}>Send</Button>
+          <Grid container justifyContent='center' alignItems="center" direction='column'>
+            <Grid item xs={12} justifyContent='center' alignItems="center">
+              <Reaptcha sitekey="Your reCAPTCHA v2 API key" onVerify={onVerify} />
+            </Grid>
+            <Grid item sx={{marginTop: 4}}>
+              <Button variant='outlined' color='primary' onClick={handleClose} sx={{marginRight: 5}}>Cancel</Button>
+              <Button variant='outlined' color='primary' onClick={handleSubmit(onSubmit)} disabled={!verified}>Send</Button>
+            </Grid>
+          </Grid>
         </DialogActions>
       </Dialog>
     </div>
