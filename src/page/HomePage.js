@@ -19,7 +19,6 @@ const HomePage = () => {
     [colorMode]
   );
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
   return (
     <div className="HomePage">
       <ThemeProvider theme={theme}>
