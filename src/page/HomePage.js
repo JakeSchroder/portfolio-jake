@@ -61,7 +61,7 @@ const HomePage = () => {
                 : theme.palette.primary.contrastText
             }
           />
-          <ResumeBodyContainer theme={theme} />
+          <ResumeBodyContainer theme={theme} isMobile={isMobile} />
           <AppBar
             className="SocialButtons"
             color="transparent"

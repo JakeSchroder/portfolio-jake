@@ -4,7 +4,7 @@ import ResumeViewComponent from "../components/ResumeView";
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 import { ResumePDF } from "../assets/global/FileVariables";
 
-export default function ResumeBody({ theme }) {
+export default function ResumeBody({ theme, isMobile }) {
   return (
     <Grid id="resumeBody" container>
       <Grid
@@ -37,7 +37,7 @@ export default function ResumeBody({ theme }) {
         </Button>
         <Grid container display="flex" justifyContent="center">
           <Card sx={{ border: 20, borderColor: theme.palette.secondary.dark }}>
-            <ResumeViewComponent sx={{ border: 20 }} />
+            <ResumeViewComponent isMobile={isMobile} sx={{ border: 20 }} />
           </Card>
         </Grid>
       </Grid>
