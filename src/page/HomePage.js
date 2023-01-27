@@ -51,7 +51,7 @@ const HomePage = () => {
                 : theme.palette.primary.contrastText
             }
           />
-          <ProjectBodyContainer />
+          <ProjectBodyContainer isMobile={isMobile} />
           <hr
             width="75%"
             color={

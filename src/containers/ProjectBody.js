@@ -3,7 +3,7 @@ import { Grid, Typography, Button, Slide } from "@mui/material";
 import ProjectCardComponent from "../components/ProjectCard";
 import { useInView } from "react-intersection-observer";
 
-export default function ProjectBody() {
+export default function ProjectBody({isMobile}) {
   const projectData = [
     {
       name: "Packrat",
@@ -65,7 +65,7 @@ export default function ProjectBody() {
           }}
         >
           {projectData.map((project, index) =>
-            ProjectCardComponent({ ...project }, index)
+            ProjectCardComponent({ ...project }, index, isMobile)
           )}
         </Grid>
         <Grid
