@@ -3,9 +3,6 @@ import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 import { ResumePDF } from "../assets/global/FileVariables";
 
 export default function AboutBodyText({ theme, isMobile }) {
-  // Use media query on page load to determine device type
-
-  // Then determine theme to use based on device type
   const textColor =
     theme.palette.mode === "light"
       ? theme.palette.secondary.light
@@ -41,7 +38,7 @@ export default function AboutBodyText({ theme, isMobile }) {
           align="center"
           sx={{
             fontFamily: "solano-gothic-pro-mvb, sans-serif",
-            fontWeight: "800",
+            fontWeight: "bold",
             fontStyle: "normal",
             animation: textShadowPopBRAnime,
           }}
@@ -49,20 +46,14 @@ export default function AboutBodyText({ theme, isMobile }) {
           Hi, I'm Jake!
         </Typography>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
+      <Grid item xs={12}>
         <Typography
           color={textColor}
           variant="h2"
           align="center"
           sx={{
             fontFamily: "solano-gothic-pro-mvb, sans-serif",
-            fontWeight: "800",
+            fontWeight: "bold",
             fontStyle: "normal",
             animation: textShadowPopBRAnime,
           }}
@@ -70,20 +61,14 @@ export default function AboutBodyText({ theme, isMobile }) {
           Building digital products, brands, and experiences
         </Typography>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
+      <Grid item xs={12}>
         <Typography
           color={textColor}
           variant="h6"
           align="center"
           sx={{
             fontFamily: "solano-gothic-pro-mvb, sans-serif",
-            fontWeight: "800",
+            fontWeight: "bold",
             fontStyle: "normal",
             animation: textShadowPopBRAnime,
           }}
@@ -103,7 +88,7 @@ export default function AboutBodyText({ theme, isMobile }) {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        sx={{paddingTop: '10%'}}
+        sx={{ paddingTop: "10%" }}
       >
         <Typography
           color={textColor}
@@ -111,7 +96,7 @@ export default function AboutBodyText({ theme, isMobile }) {
           align="center"
           sx={{
             fontFamily: "solano-gothic-pro-mvb, sans-serif",
-            fontWeight: "800",
+            fontWeight: "bold",
             fontStyle: "normal",
             animation: textShadowPopBRAnime,
           }}
@@ -125,7 +110,7 @@ export default function AboutBodyText({ theme, isMobile }) {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        sx={{paddingBottom:'6%'}}
+        sx={{ paddingBottom: "6%" }}
       >
         <Typography
           color={textColor}
@@ -133,45 +118,41 @@ export default function AboutBodyText({ theme, isMobile }) {
           align="center"
           sx={{
             fontFamily: "solano-gothic-pro-mvb, sans-serif",
-            fontWeight: "800",
+            fontWeight: "bold",
             fontStyle: "normal",
             animation: textShadowPopBRAnime,
           }}
         >
-          Fullstack Developer and <br/>UX Designer
+          Fullstack Developer and <br />
+          UX Designer
         </Typography>
-      </Grid> 
+      </Grid>
     </>
   );
+
   return (
-    <Grid
-      item
-      xs={isMobile ? 12 : 5}
-      display="flex"
-      justifyContent="center"
-      position="relative"
-      direction="column"
-      sx={{ top: 30 }}
-    >
-      {isMobile ? mobileView : desktopView}
-      <Grid
-        item
-        xs={12}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Button
-          href={ResumePDF}
-          download={true}
-          variant="contained"
-          color="secondary"
-          endIcon={<ArrowCircleDownIcon />}
-          size="large"
-          sx={{ borderRadius: 28 }}
+    <Grid item xs={isMobile ? 12 : 5} display="flex">
+      <Grid container position="relative" direction="row" sx={{ top: 50 }}>
+        {isMobile ? mobileView : desktopView}
+        <Grid
+          item
+          xs={12}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
         >
-          <b>Resume</b>
-        </Button>
+          <Button
+            href={ResumePDF}
+            download={true}
+            variant="contained"
+            color="secondary"
+            endIcon={<ArrowCircleDownIcon />}
+            size="large"
+            sx={{ borderRadius: 28 }}
+          >
+            <b>Resume</b>
+          </Button>
+        </Grid>
       </Grid>
     </Grid>
   );
