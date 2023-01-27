@@ -14,18 +14,18 @@ export default function ProfilePic({ theme, isMobile }) {
   `;
   const blobAnim = `${blob} 60s linear infinite`;
   const profileImageSize = isMobile
-    ? { width: 200, height: 200 }
+    ? { width: 250, height: 250 }
     : { width: 500, height: 500 };
   const largeCircleSize = isMobile
-    ? { width: 200, height: 300 }
+    ? { width: 250, height: 300 }
     : { width: 500, height: 600 };
   const smallCircleSize = isMobile
-    ? { width: 300, height: 225 }
+    ? { width: 300, height: 250 }
     : { width: 600, height: 450 };
   return (
     <Grid
       item
-      xs={5}
+      xs={isMobile ? 12 : 5}
       display="flex"
       justifyContent="center"
       alignItems="center"

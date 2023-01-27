@@ -12,7 +12,8 @@ export default function AboutBody({ theme, isMobile }) {
       elevation={0}
       justifyContent="space-between"
       display="flex"
-      sx={{ paddingTop: "3%", paddingRight: 10 }}
+      direction='row'
+      sx={ isMobile ? { paddingTop: "13%", paddingRight: 0 } : { paddingTop: "3%", paddingRight: 10 }}
     >
       <ProfilePic theme={theme} isMobile={isMobile} />
       {!isMobile && <TechIcons theme={theme} />}

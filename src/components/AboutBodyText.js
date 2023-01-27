@@ -103,6 +103,7 @@ export default function AboutBodyText({ theme, isMobile }) {
         display="flex"
         justifyContent="center"
         alignItems="center"
+        sx={{paddingTop: '10%'}}
       >
         <Typography
           color={textColor}
@@ -124,6 +125,7 @@ export default function AboutBodyText({ theme, isMobile }) {
         display="flex"
         justifyContent="center"
         alignItems="center"
+        sx={{paddingBottom:'6%'}}
       >
         <Typography
           color={textColor}
@@ -136,15 +138,15 @@ export default function AboutBodyText({ theme, isMobile }) {
             animation: textShadowPopBRAnime,
           }}
         >
-          Fullstack Developer/UX Designer
+          Fullstack Developer and <br/>UX Designer
         </Typography>
-      </Grid>
+      </Grid> 
     </>
   );
   return (
     <Grid
       item
-      xs={5}
+      xs={isMobile ? 12 : 5}
       display="flex"
       justifyContent="center"
       position="relative"
