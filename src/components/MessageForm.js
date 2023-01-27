@@ -69,6 +69,18 @@ export default function MessageForm() {
               <TextField
                 autoFocus
                 margin="dense"
+                id="company"
+                label="Company"
+                type="company"
+                variant="outlined"
+                color='primary'
+                {...register("company", {required: true, maxLength: 50, type: "text", pattern: /^[A-Za-z]+$/i })}
+              />
+            </Grid>
+            <Grid item>
+              <TextField
+                autoFocus
+                margin="dense"
                 id="email"
                 label="Email"
                 type="email"
