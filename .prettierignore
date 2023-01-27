@@ -1,0 +1,5 @@
+# Ignore artifacts:
+build
+nginx
+node_modules
+public
