@@ -31,6 +31,7 @@ export default function MessageForm() {
     reset({
       firstName: "",
       lastName: "",
+      company: "",
       email: "",
       message: "",
     });
