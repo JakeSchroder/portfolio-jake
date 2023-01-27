@@ -132,7 +132,7 @@ export default function AboutBodyText({ theme, isMobile }) {
 
   return (
     <Grid item xs={isMobile ? 12 : 5} display="flex">
-      <Grid container position="relative" direction="row" sx={{ top: 50 }}>
+      <Grid container position="relative" direction="row" sx={{ top: 30 }}>
         {isMobile ? mobileView : desktopView}
         <Grid
           item
