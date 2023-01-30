@@ -47,8 +47,8 @@ export default function ProfilePic({ theme, isMobile }) {
           justifyContent="center"
           alignItems="center"
           {...smallCircleSize}
-          left={30}
-          top={20}
+          left={isMobile ? 0 : 30}
+          top={isMobile ? 10 : 20}
           sx={{
             overflow: "hidden",
             backgroundColor: theme.palette.primary.contrastText,

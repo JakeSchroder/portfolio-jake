@@ -11,7 +11,11 @@ import {
 import LanguageIcon from "@mui/icons-material/Language";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-export default function ProjectCard({ name, gitPage, link, text, img }, index, isMobile) {
+export default function ProjectCard(
+  { name, gitPage, link, text, img },
+  index,
+  isMobile
+) {
   const scaleDownCenter = keyframes`
     0%{
       transform:scale(1)
@@ -19,8 +23,8 @@ export default function ProjectCard({ name, gitPage, link, text, img }, index, i
     100%{
       transform:scale(.95)
     }`;
-  
-  const sizeMultiplier = isMobile ? .80 : 1;
+
+  const sizeMultiplier = isMobile ? 0.8 : 1;
   return (
     <Grid key={index} paddingBottom={5}>
       <Card
@@ -35,8 +39,8 @@ export default function ProjectCard({ name, gitPage, link, text, img }, index, i
         <CardActionArea>
           <Box
             position="absolute"
-            width={400*sizeMultiplier}
-            height={290*sizeMultiplier}
+            width={400 * sizeMultiplier}
+            height={290 * sizeMultiplier}
             sx={{
               opacity: 0,
               "&:hover": { backgroundColor: "black", opacity: [0.9, 0.8, 0.7] },

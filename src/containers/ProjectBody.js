@@ -3,7 +3,7 @@ import { Grid, Typography, Button, Slide } from "@mui/material";
 import ProjectCardComponent from "../components/ProjectCard";
 import { useInView } from "react-intersection-observer";
 
-export default function ProjectBody({isMobile}) {
+export default function ProjectBody({ isMobile }) {
   const projectData = [
     {
       name: "Packrat",
@@ -82,7 +82,7 @@ export default function ProjectBody({isMobile}) {
             target="_blank"
             sx={{ borderRadius: 28 }}
           >
-            See more
+            <b>See more</b>
           </Button>
         </Grid>
       </Grid>
