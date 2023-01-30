@@ -51,7 +51,7 @@ export default function MessageForm() {
         onClick={handleClickOpen}
         sx={{ borderRadius: 28 }}
       >
-        Contact
+        <b>Contact</b>
       </Button>
       <Dialog open={open} onClose={handleClose} maxWidth="md">
         <DialogTitle>Send me a message!</DialogTitle>
