@@ -49,7 +49,6 @@ export default function Header({ colorMode, setColorMode, theme }) {
             <b>Resume</b>
           </Link>
         </Button>
-        <MessageFormComponent />
         <IconButton
           aria-label="Toggle light mode"
           size="large"
